@@ -1,0 +1,34 @@
+单词花园 · 偷菜大作战
+================================
+
+【最简单的打开方式】
+双击 index.html 即可在浏览器中游玩（推荐 Chrome / Edge）。
+进度保存在浏览器本地存储中，换浏览器或清除浏览数据会丢失。
+
+【推荐方式：本地服务器】
+如果双击打开后页面空白，用本地服务器更稳妥：
+
+  Windows（装了 Python）：
+    1. 进入本文件夹
+    2. 在地址栏输入 cmd 回车，然后执行：
+         python -m http.server 8080
+    3. 浏览器访问 http://127.0.0.1:8080
+
+  或者装了 Node.js：
+         npx serve .
+
+【出现旧界面 / 白屏怎么办】
+按 Ctrl + Shift + R 强制刷新，或在开发者工具 F12 的
+Application -> Storage 里点 Clear site data 清除缓存。
+
+【目录结构】
+  index.html        入口页面
+  manifest.json     PWA 配置
+  sw.js             离线缓存
+  css/style.css     全部样式
+  js/               核心逻辑与各页面模块
+  js/pages/         花园 / 学习 / 好友 / 商店 等页面
+  icons/            应用图标
+
+【说明】
+本应用为纯前端实现，无需联网即可运行，不依赖任何外部 CDN。
