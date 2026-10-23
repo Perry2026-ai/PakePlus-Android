@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>单词花园：偷菜大作战</title>
+<meta name="theme-color" content="#5aa862">
+<meta name="description" content="背单词·种花园·养萌宠，边学边玩的单词养成游戏">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="单词花园">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css?v=13">
+</head>
+<body>
+<div id="app">
+
+  <!-- 首次进入：花园创建 / 登录 -->
+  <div id="loginScreen" class="login-screen hidden"></div>
+
+  <!-- 顶部全局导航栏 -->
+  <header id="topbar" class="topbar"></header>
+
+  <!-- 四分区主体 -->
+  <div class="layout">
+    <aside id="sidebar" class="sidebar"></aside>
+    <main id="view" class="main-view"></main>
+    <aside id="rightbar" class="rightbar"></aside>
+    <!-- 移动端抽屉遮罩（放在 .layout 内，保证层级位于侧栏之下） -->
+    <div id="drawerMask" class="drawer-mask"></div>
+  </div>
+
+  <!-- 浮层 -->
+  <div id="toastLayer" class="toast-layer"></div>
+  <div id="floatLayer" class="float-layer"></div>
+  <div id="modalLayer" class="modal-layer hidden"></div>
+</div>
+
+<script src="js/wordbank.js?v=3"></script>
+<script src="js/data.js?v=8"></script>
+<script src="js/util.js?v=4"></script>
+<script src="js/state.js?v=7"></script>
+<script src="js/sprite-engine.js?v=7"></script>
+<script src="js/ui.js?v=8"></script>
+<script src="js/pages/garden.js?v=12"></script>
+<script src="js/pages/fish.js?v=13"></script>
+<script src="js/pages/orchard.js?v=13"></script>
+<script src="js/pages/livestock.js?v=13"></script>
+<script src="js/pages/learn.js?v=7"></script>
+<script src="js/pages/pet.js?v=11"></script>
+<script src="js/pages/shop.js?v=4"></script>
+<script src="js/pages/friends.js?v=4"></script>
+<script src="js/pages/tasks.js?v=4"></script>
+<script src="js/pages/rank.js?v=3"></script>
+<script src="js/pages/profile.js?v=3"></script>
+<script src="js/app.js?v=3"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  });
+}
+</script>
+</body>
+</html>
